@@ -159,6 +159,7 @@ function fillTable() {
         ["Day 70", "Memory Game App", "./public/Memory Game App/index.html"],
   
          ["Day 75", "MyPaint", "public/day75-mypaint/index.html"],
+         ["Day 86", "Stranger Things", "public/Day-86_stranger.things/index.html"],
 
   
 ];
