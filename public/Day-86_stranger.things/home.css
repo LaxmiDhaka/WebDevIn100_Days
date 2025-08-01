@@ -1,0 +1,103 @@
+@font-face {
+  font-family: 'StrangerThings';
+  src: url('stranger-things-1/Stranger Things.ttf') format('truetype');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'StrangerThings', sans-serif;
+  overflow-x: hidden;
+  color: red;
+}
+
+/* ✅ Background */
+.bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -2;
+  overflow: hidden;
+}
+
+.bg img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  filter: brightness(79%) hue-rotate(340deg);
+}
+
+/* ✅ Netflix text in top-right */
+.netflix-label {
+  position: fixed;
+  top: 20px;
+  left: 30px;
+  font-size: 36px;
+  color: red;
+  font-family: 'StrangerThings', sans-serif;
+  z-index: 2;
+}
+
+/* ✅ Spotlight (optional) */
+.spotlight {
+  position: fixed;
+  pointer-events: none;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.25) 0%, rgba(0,0,0,0.75) 70%);
+  mix-blend-mode: lighten;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+/* ✅ Season Buttons */
+.grid {
+  position: fixed;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 40px;
+  z-index: 1;
+}
+
+.grid a button {
+  width: 170px;
+  height: 85px;
+  font-family: 'StrangerThings', serif;
+  font-size: 2.1rem;
+  color: hsl(348, 86%, 52%);
+  background: transparent;
+  border: 2.5px solid hsl(348, 86%, 52%);
+  text-shadow:
+    0 0 25px #ff0000,
+    0 0 20px #ff0000,
+    0 0 30px #ff0000,
+    0 0 55px rgba(255, 0, 0, 0.7);
+  cursor: pointer;
+  animation: flicker 2.5s infinite ease-in-out;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.grid a button:hover {
+  background: rgba(255, 0, 0, 0.1);
+  box-shadow: 0 0 12px #ff0000;
+}
+
+@keyframes flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    opacity: 1;
+  }
+  20%, 22%, 24%, 55% {
+    opacity: 0.4;
+  }
+}

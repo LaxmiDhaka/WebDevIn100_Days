@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clickable Image Grid</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f9f9f9;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr; /* Two images per row */
+      gap: 20px;
+      max-width: 800px;  /* 💡 Change this to increase/decrease the grid's width */
+      width: 100%;
+      padding: 20px;
+    }
+
+    .grid a img {
+      width: 100%;       /* 💡 Set width relative to container */
+      height: auto;      /* 💡 Maintains aspect ratio. Change to fixed height (e.g., 200px) if needed */
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .grid a img:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="grid">
+    <!-- 🖼 IMAGE 1 -->
+    <a href="https://example.com/page1" target="_blank"> <!-- 🔗 Change this to the URL you want -->
+      <img src="https://via.placeholder.com/300x200?text=Image+1" alt="Image 1" /> <!-- 📷 Change image URL here -->
+    </a>
+
+    <!-- 🖼 IMAGE 2 -->
+    <a href="https://example.com/page2" target="_blank">
+      <img src="https://via.placeholder.com/300x200?text=Image+2" alt="Image 2" />
+    </a>
+
+    <!-- 🖼 IMAGE 3 -->
+    <a href="https://example.com/page3" target="_blank">
+      <img src="https://via.placeholder.com/300x200?text=Image+3" alt="Image 3" />
+    </a>
+
+    <!-- 🖼 IMAGE 4 -->
+    <a href="https://example.com/page4" target="_blank">
+      <img src="https://via.placeholder.com/300x200?text=Image+4" alt="Image 4" />
+    </a>
+  </div>
+</body>
+</html>
