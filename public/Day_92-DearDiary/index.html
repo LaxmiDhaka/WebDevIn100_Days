@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dear Diary</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div id="start-page">
+
+        <div class="overlay"></div>
+        <h1 class="diary-title">Dear Diary</h1>
+        <button id="startButton" class="start-button">Start Writing</button>
+    </div>
+
+
+    <div id="writing-page" class="hidden">
+        <div class="writing-container">
+            <div class="top-bar">
+                <button id="backButton" class="back-button">&larr;</button>
+                <h2 class="header-title">My Thoughts</h2>
+                <div style="width: 2rem;"></div> 
+            </div>
+        
+            <input type="text" id="dateInput" class="date-input" placeholder="e.g., May 1, 2024" required>
+            <textarea id="diaryInput" class="diary-textarea" placeholder="Start writing your thoughts here...">Dear Diary,</textarea>
+            <button id="saveButton" class="save-button">Save Entry</button>
+            <div id="entries" class="entries-container">
+              
+            </div>
+        </div>
+    </div>
+
+    <div id="entry-modal">
+        <div class="modal-content">
+            <button id="closeModal" class="modal-close-button">&times;</button>
+            <div id="modal-date" class="entry-date text-lg text-black"></div>
+            <div id="modal-content" class="entry-content text-lg text-black"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

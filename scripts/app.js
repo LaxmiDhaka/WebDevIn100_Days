@@ -679,7 +679,25 @@ class WebDev100Days {
         category: "utilities",
         technologies: ["HTML", "CSS", "JavaScript", "API"],
         features: ["Visitor Management", "History Tracking", "Search Functionality"]
-      }
+      },
+      {
+        originalDay: 155,
+        name: "Stranger Things",
+        description: "Stranger Things fan page.",
+        demoLink: "./public/Day_89-StrangerThings/index.html",
+        category: "advanced",
+        technologies: ["HTML", "CSS", "JavaScript"],
+        features: ["Responsive Design", "Interactive UI"]
+      },
+      {
+        originalDay: 160,
+        name: "Dear Diary",
+        description: "Dear diary for journaling.",
+        demoLink: "./public/Day_92-DearDiary/index.html",
+        category: "utilities",
+        technologies: ["HTML", "CSS", "JavaScript"],
+        features: ["Responsive Design", "Interactive UI"]
+      },
 
 
     ];
